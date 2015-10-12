@@ -10,7 +10,7 @@ namespace Class1
     {
         public Student()
         {
-            this.name = "default name";
+            this.Name = "default name";
         }
     }
 }

@@ -9,7 +9,22 @@ namespace Class1
     public class Person
     {
         public int age { get; set; }
-        protected string name;
+
+        public  string Name
+        {
+            get
+            {
+                return name;
+            }
+
+            set
+            {
+                name = value;
+            }
+        }
+
+        private string name
+            ;
         public void tellage()
         {
             Console.WriteLine("my age is " + age);
