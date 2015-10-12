@@ -1,0 +1,18 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Class1
+{
+    public class Person
+    {
+        public int age { get; set; }
+        protected string name;
+        public void tellage()
+        {
+            Console.WriteLine("my age is " + age);
+        }
+    }
+}
