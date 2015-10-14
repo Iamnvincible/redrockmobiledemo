@@ -14,7 +14,7 @@ namespace Class1
         {
             get
             {
-                return name;
+                return name +"is shabi";
             }
 
             set

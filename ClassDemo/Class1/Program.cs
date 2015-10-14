@@ -8,6 +8,13 @@ namespace Class1
 {
     class Program
     {
+        enum orientation : byte
+        {
+            north = 1,
+            south = 2,
+            east = 3,
+            west = 4
+        }
         static void Main(string[] args)
         {
             #region 类型转换，值类型
@@ -23,6 +30,22 @@ namespace Class1
             d = b;
             b = (float)d;
             Console.WriteLine("{0}--{1}--{2}--{3}--{4}--{5}--{6}", a, b, c, d, e, f, g);
+            #endregion
+
+            #region 枚举
+
+
+            orientation dir = orientation.east;
+            byte dirbyte = (byte)dir;
+            orientation dir2 = (orientation)2;
+            string dirstr = dir.ToString();
+            string dirstr2 = Convert.ToString(dir);
+            string strori = "east";
+            orientation oristr=(orientation)Enum.Parse(typeof(orientation),strori);
+            Console.WriteLine("the byte value {0}", dirbyte);
+            Console.WriteLine("the ori value {0},{1},{2}", dir,oristr,dir2);
+            Console.WriteLine("the string value of a enum "+dirstr);
+
             #endregion
 
             #region string初步
@@ -69,7 +92,7 @@ namespace Class1
             int[] inter2 = inter;
             inter2[0] = 10086;
             Console.WriteLine("the first element of inter " + inter[0]);
-          
+
             int[] myarray = new int[4];
             int[] myarray2 = new int[4] { 1, 2, 3, 4 };
             int[] myarray3 = new int[] { 1, 2, 3, 4 };
@@ -78,8 +101,8 @@ namespace Class1
                 Console.WriteLine(item);
 
             }
-            double  av=inter.Average();
-            
+            double av = inter.Average();
+
 
             Person[] persons = new Person[5];
             persons[0] = new Person { age = 23, Name = "Peter" };
