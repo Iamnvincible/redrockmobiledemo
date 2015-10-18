@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Class1
 {
@@ -44,8 +41,8 @@ namespace Class1
             orientation oristr=(orientation)Enum.Parse(typeof(orientation),strori);
             Console.WriteLine("the byte value {0}", dirbyte);
             Console.WriteLine("the ori value {0},{1},{2}", dir,oristr,dir2);
-            Console.WriteLine("the string value of a enum "+dirstr);
-
+            Console.WriteLine("the string value of a enum "+dirstr+"hello");
+            Console.WriteLine(3+""+5);
             #endregion
 
             #region string初步
@@ -75,7 +72,7 @@ namespace Class1
             Console.WriteLine("s1 is " + s1);
             Console.WriteLine("s2 is " + s2);
             #endregion
-
+            
             #region 真正的引用
             Person p1 = new Person { age = 20 };
             Person p2 = p1;
@@ -99,7 +96,6 @@ namespace Class1
             foreach (var item in inter)
             {
                 Console.WriteLine(item);
-
             }
             double av = inter.Average();
 
@@ -138,6 +134,44 @@ namespace Class1
                     Console.WriteLine("row {0},element:{1} ,value {2}", row, element, jagged[row][element]);
                 }
             }
+            #endregion
+
+            #region string的方法
+            //Split
+            string spstr = "Microsoft Surface Book";
+            char spchar = ' ';
+            string[] splitted = spstr.Split(spchar);
+            foreach (var item in splitted)
+            {
+                Console.WriteLine(item);
+            }
+            //Replace
+            string repstr = "Apple is a good computer company.";
+            string repstr1 = repstr.Replace("Apple", "Microsoft");
+            string repstr2 = repstr1.Replace("good", "Great");
+            repstr2.Replace('p', '3');
+            repstr2 += "in the world";
+            Console.WriteLine(repstr);
+            Console.WriteLine(repstr1);
+            Console.WriteLine(repstr2);
+
+            string repstrch = "Book Good Food Mood Fool";
+            char rr = 'o';
+            string repstrch2 = repstrch.Replace(rr, '?');
+            Console.WriteLine(repstrch);
+            Console.WriteLine(repstrch2);
+
+            //SubString
+            string substr = "Hello From Redrock Mobile WP";
+            string substr2 = substr.Substring(11);
+            Console.WriteLine("the origin string is {0}, \n after substring {1}",substr,substr2);
+            string substr3 = substr2.Substring(0, 7);
+            Console.WriteLine("the origin string is {0}, after substring {1}", substr2, substr3);
+
+
+
+
+
             #endregion
             Console.ReadLine();
 
