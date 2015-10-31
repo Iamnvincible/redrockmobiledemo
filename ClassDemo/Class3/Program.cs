@@ -12,6 +12,10 @@ namespace Class3
         static void Main(string[] args)
         {
 
+            Console.WriteLine(args.Length);
+            foreach(var item in args){
+                Console.WriteLine(item);
+            }
             #region stringbuilder和string
             string a = "0";
             DateTime t = DateTime.Now;
@@ -48,6 +52,19 @@ namespace Class3
                 list2.Add(i);
             }
             Console.WriteLine("完成List");
+            list2.Clear();
+            list2.Add(2);
+            list2.Add(3);
+            list2.Add(1);
+            list2.Add(-3);
+            list2.Add(7);
+            list2.Add(3);
+            list2.Sort(new mysort());
+            foreach (var item in list2)
+            {
+                Console.Write(item);
+            }
+            Console.WriteLine();
             #endregion
 
             int[] arr = { 1, 2, 3, 45, 5 };
@@ -93,6 +110,13 @@ namespace Class3
         static void testobj(Person p)
         {
             p.Name = "e";
+        }
+        class mysort : IComparer<int>
+        {
+            public int Compare(int x, int y)
+            {
+                return -x + y;
+            }
         }
     }
 }
