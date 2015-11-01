@@ -9,6 +9,7 @@ namespace demo2
 {
     class Program
     {
+        //阶乘
         static int Factorial(int i)
         {
             if (i == 1)

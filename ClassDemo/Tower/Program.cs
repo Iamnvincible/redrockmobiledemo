@@ -20,6 +20,11 @@ namespace Tower
             H(a, b, c, n);
             Console.ReadKey();
         }
+        /// <summary>
+        /// 从x移动到y
+        /// </summary>
+        /// <param name="x"></param>
+        /// <param name="y"></param>
         static void Move(char x,char y)
         {
             Console.WriteLine("从{0}移动到{1}", x, y);
