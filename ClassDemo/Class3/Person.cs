@@ -38,7 +38,11 @@ namespace Class3
 
         public object Clone()
         {
-            return base.MemberwiseClone();
+            Person temp = new Person();
+            temp.Name = Name;
+            temp.inclass = new Person { Name = this.Name };//deep clone
+            temp.inclass = this.Name;//
+            return temp;//base.MemberwiseClone();
         }
     }
 }
