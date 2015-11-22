@@ -36,8 +36,8 @@
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <StackPanel Orientation="Vertical">
-                            <TextBlock Text="{Binding Name}"></TextBlock>
-                            <TextBlock Text="{Binding Number}"></TextBlock>
+                            <TextBlock Text="{Binding Name, Mode=OneWay}"></TextBlock>
+                            <TextBlock Text="{Binding Number,Mode=OneWay}"></TextBlock>
                             <Line Stroke="Black" Height="5" HorizontalAlignment="Stretch"></Line>
                         </StackPanel>
                     </DataTemplate>
