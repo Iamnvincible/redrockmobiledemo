@@ -8,10 +8,13 @@ namespace Class3Workout
 {
     public class NameSort : IComparer<Student>
     {
+        //public int Compare(Student x, Student y)
+        //{
+        //    return x.Name.CompareTo(y.Name);
+        //}
         public int Compare(Student x, Student y)
         {
-            return x.Name.CompareTo(y.Name);
+            return x.Number - y.Number;
         }
-
     }
 }
