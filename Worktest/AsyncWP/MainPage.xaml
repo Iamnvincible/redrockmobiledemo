@@ -12,6 +12,7 @@
             <ProgressRing x:Name="progressring" IsActive="True" Width="60" Height="60" Foreground="BlueViolet"></ProgressRing>
             <Button x:Name="btn" Content="点我" HorizontalAlignment="Center" Click="btn_Click"></Button>
             <TextBlock x:Name="txt" Text="你好世界" HorizontalAlignment="Center"></TextBlock>
+            <TextBlock x:Name="num" Text="滚起来" HorizontalAlignment="Center"></TextBlock>
         </StackPanel>
     </Grid>
 </Page>

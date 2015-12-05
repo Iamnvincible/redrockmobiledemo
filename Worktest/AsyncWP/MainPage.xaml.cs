@@ -24,24 +24,36 @@ namespace AsyncWP
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        DispatcherTimer dt = new DispatcherTimer();
+        static int time = 0;
         public MainPage()
         {
             this.InitializeComponent();
+            dt.Interval = new TimeSpan(1000);
+            dt.Tick += Dt_Tick;
+            dt.Start();
+            
+        }
+
+        private void Dt_Tick(object sender, object e)
+        {
+            Debug.WriteLine("{0}",time++);
+            num.Text = time.ToString();
         }
 
         private async void btn_Click(object sender, RoutedEventArgs e)
         {
-            this.progressring.IsActive = !progressring.IsActive;
-            await Task.Delay(400);
-            this.txt.Text = "微软创新杯";
-            await Task.Run(() => {
-                for (int i = 0; i < 10; i++)
-                {
-                   // this.txt.Text = i.ToString();
-                    Task.Delay(4000);
-                    Debug.Write(i);
-                }
-            });
+            //this.progressring.IsActive = !progressring.IsActive;
+            //await Task.Delay(3000);
+            //this.txt.Text = "微软创新杯";
+            //await Task.Run(() => {
+            //    for (int i = 0; i < 10; i++)
+            //    {
+            //       // this.txt.Text = i.ToString();
+            //        Task.Delay(4000);
+            //        Debug.Write(i);
+            //    }
+            //});
           
             this.progressring.IsActive = !progressring.IsActive;
             Button nb = new Button();
