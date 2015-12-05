@@ -8,7 +8,7 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <StackPanel Orientation="Vertical" VerticalAlignment="Center">
+        <StackPanel x:Name="stp" Orientation="Vertical" VerticalAlignment="Center">
             <ProgressRing x:Name="progressring" IsActive="True" Width="60" Height="60" Foreground="BlueViolet"></ProgressRing>
             <Button x:Name="btn" Content="点我" HorizontalAlignment="Center" Click="btn_Click"></Button>
             <TextBlock x:Name="txt" Text="你好世界" HorizontalAlignment="Center"></TextBlock>

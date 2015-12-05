@@ -32,7 +32,7 @@ namespace AsyncWP
         private async void btn_Click(object sender, RoutedEventArgs e)
         {
             this.progressring.IsActive = !progressring.IsActive;
-            await Task.Delay(4000);
+            await Task.Delay(400);
             this.txt.Text = "微软创新杯";
             await Task.Run(() => {
                 for (int i = 0; i < 10; i++)
@@ -44,6 +44,10 @@ namespace AsyncWP
             });
           
             this.progressring.IsActive = !progressring.IsActive;
+            Button nb = new Button();
+            nb.Content = "哇塞";
+            nb.HorizontalAlignment = HorizontalAlignment.Center;
+            stp.Children.Add(nb);
         }
     }
 }
