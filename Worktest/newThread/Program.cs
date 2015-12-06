@@ -9,16 +9,16 @@ namespace newThread
 {
     class Program
     {
-        static void Main(string[] args)
+        static  void Main(string[] args)
         {
-            
+
             Thread t = new Thread(newthread);
             t.Start();
-            for (int i = 0; i < 10; i++)
-            {
-                Console.WriteLine("主线程2秒");
-                Thread.Sleep(2000);
-            }
+            //for (int i = 0; i < 10; i++)
+            //{
+            //    Console.WriteLine("主线程2秒");
+            //    Thread.Sleep(2000);
+            //}
             Console.WriteLine("finished");
             Console.ReadKey();
 

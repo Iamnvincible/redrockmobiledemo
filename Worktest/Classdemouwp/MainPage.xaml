@@ -1,0 +1,18 @@
+﻿<Page
+    x:Class="Classdemouwp.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Classdemouwp"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <StackPanel Name="stp" VerticalAlignment="Center" Orientation="Vertical">
+            <ProgressRing Name="progressring" IsActive="True" Height="60" Width="60"></ProgressRing>
+            <Button x:Name="btn" Content="停止菊花" HorizontalAlignment="Center" Click="btn_Click"/>
+            <TextBlock x:Name="txt" Text="你好菊花" HorizontalAlignment="Center" FontSize="20" Margin="0,40,0,0"></TextBlock>
+            <Button Content="按钮"/>
+        </StackPanel>
+    </Grid>
+</Page>
